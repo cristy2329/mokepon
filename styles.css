@@ -24,7 +24,7 @@ body {
   font-size: 20px;
 }
 
-.tarjetas{
+.tarjetas, .tarjetas-ataques {
   display: flex;
   gap: 10px;
 }
@@ -50,8 +50,6 @@ body {
 #boton-mascota  {
   width: 180px;
   height: 40px;
-  padding: 10px;
-  box-sizing: border-box;
   margin-top: 30px;
   border-radius: 20px;
   background: transparent;
@@ -64,6 +62,10 @@ input {
   display: none;
 }
 
+input:checked + label {
+  background-color: #47B5FF;
+}
+
 #seleccionar-ataque {
   flex-direction: column;
   align-items: center;
@@ -74,8 +76,48 @@ input {
   padding: 10px;
   box-sizing: border-box;
   border-radius: 20px;
-  border-color: transparent
+  border-color: transparent;
   width: 100px;
   color: white;
-  
+  font-family: 'Poppins', sans-serif;
+}
+
+#mensajes {
+  width: 280px;
+  background: #DFF6FF;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#boton-reiniciar{
+  border: none;
+  color: #95D1CC;
+  font-family: 'Poppins', sans-serif;
+}
+
+.ataques {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  color: white;
+}
+
+#vidas-jugador, #vidas-enemigo {
+  font-size: 32px;
+  margin-bottom: 0;
+}
+
+.ataques-jugador, .ataques-enemigo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 360px) {
+  .tarjetas, .tarjetas-ataques {
+    flex-direction: column;
+  }
 }
